@@ -1519,6 +1519,7 @@ GameObject:
   - component: {fileID: 8416618447365516823}
   - component: {fileID: 1320793355159717175}
   - component: {fileID: 1802955455282360142}
+  - component: {fileID: 5517978977248504866}
   m_Layer: 0
   m_Name: Cow_White
   m_TagString: Untagged
@@ -1535,7 +1536,7 @@ Transform:
   m_GameObject: {fileID: 7737356212113723771}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 4.49, y: 0, z: 12}
+  m_LocalPosition: {x: 4.49, y: 0, z: 0}
   m_LocalScale: {x: 0.09, y: 0.09, z: 0.09}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1576,6 +1577,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &5517978977248504866
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7737356212113723771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e43aefceba2764597ca391cc29b3a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8088542366196069820
 GameObject:
   m_ObjectHideFlags: 0
