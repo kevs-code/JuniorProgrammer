@@ -1,29 +1,33 @@
 using UnityEngine;
 
-public class SpawnManager : MonoBehaviour
+namespace PrototypeTwo
 {
-    public GameObject[] animalPrefabs;
-    private float spawnRangeX = 10;
-    private float spawnPosZ = 20;
-    private float startDelay = 2;
-    private float spawnInterval = 1.5f;
-
-    private void Start()
+    public class SpawnManager : MonoBehaviour
     {
-        InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
-    }
+        public GameObject[] animalPrefabs;
+        private float spawnRangeX = 10;
+        private float spawnPosZ = 20;
+        private float startDelay = 2;
+        private int spawnInterval = 1;
 
-    private void Update()
-    {
+        private void Start()
+        {
+            InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
+        }
 
-    }
+        private void Update()
+        {
 
-    private void SpawnRandomAnimal()
-    {
-        int animalIndex = Random.Range(0, animalPrefabs.Length);
+        }
 
-        Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+        private void SpawnRandomAnimal()
+        {
+            spawnInterval = Random.Range(3, 5); // check whether int or float inclusive
+            int animalIndex = Random.Range(0, animalPrefabs.Length);
 
-        Instantiate(animalPrefabs[animalIndex], spawnPosition, animalPrefabs[animalIndex].transform.rotation);
+            Vector3 spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
+
+            Instantiate(animalPrefabs[animalIndex], spawnPosition, animalPrefabs[animalIndex].transform.rotation);
+        }
     }
 }
