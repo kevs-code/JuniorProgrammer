@@ -1,10 +1,14 @@
+using System.Collections;
 using UnityEngine;
 
-namespace Lab3
+namespace Lab4
 {
     public class PlayerController : MonoBehaviour
     {
         private Rigidbody playerRb;
+        private bool hasPowerUp = false;
+        private float powerUpStrength = 20f;
+        private float powerUpDuration = 15f;
         public float verticalInput;
         public float horizontalInput;
         public float speed = 10f;
@@ -27,6 +31,45 @@ namespace Lab3
                 Debug.Log($"Missile Fired: {projectilePrefab.name}");
                 // Instantiate(projectilePrefab, transform.position, projectilePrefab.transform.rotation);
             }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.CompareTag("PowerUp"))
+            {
+                hasPowerUp = true;
+                Debug.Log("Has PowerUp!");
+                Destroy(other.gameObject);
+                StartCoroutine(PowerupCooldown());
+                // powerupIndicator.SetActive(true);
+            }
+        }
+
+        private void OnCollisionEnter(Collision other)
+        {
+            if (other.gameObject.CompareTag("Enemy"))
+            {
+                Debug.Log($"Contact {other.gameObject.name}");
+                Rigidbody enemyRigidbody = other.gameObject.GetComponent<Rigidbody>();
+                Vector3 awayFromPlayer = other.gameObject.transform.position - transform.position;
+                // Vector3 awayFromPlayer = (collision.gameObject.transform.position - transform.position);
+
+                if (hasPowerUp) // if have powerup hit enemy with powerup force
+                {
+
+                    Debug.Log($"Bosh {other.gameObject.name}");
+                    enemyRigidbody.AddForce(awayFromPlayer * powerUpStrength, ForceMode.Impulse);
+                }
+
+            }
+        }
+
+        IEnumerator PowerupCooldown()
+        {
+            yield return new WaitForSeconds(powerUpDuration);
+            hasPowerUp = false;
+            Debug.Log("PowerUp ends!");
+            // powerupIndicator.SetActive(false);
         }
 
         private void MovePlayer()

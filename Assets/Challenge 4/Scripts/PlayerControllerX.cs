@@ -75,8 +75,6 @@ namespace ChallengeFour
                 {
                     enemyRigidbody.AddForce(awayFromPlayer * normalStrength, ForceMode.Impulse);
                 }
-
-
             }
         }
     }

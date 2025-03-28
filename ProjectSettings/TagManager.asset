@@ -11,6 +11,8 @@ TagManager:
   - Background
   - PowerUp
   - Enemy
+  - Powerup
+  - Projectile
   layers:
   - Default
   - TransparentFX
