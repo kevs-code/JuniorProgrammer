@@ -450,11 +450,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -1576038041428654457, guid: b9142810cd3b31544b6c75f37f0cf9ed, type: 3}
       propertyPath: jumpForce
-      value: 7
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: -1576038041428654457, guid: b9142810cd3b31544b6c75f37f0cf9ed, type: 3}
       propertyPath: gravityModifier
-      value: 1
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3606448325089915785, guid: b9142810cd3b31544b6c75f37f0cf9ed, type: 3}
       propertyPath: m_Name
@@ -502,7 +502,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9051908954472751461, guid: b9142810cd3b31544b6c75f37f0cf9ed, type: 3}
       propertyPath: m_Mass
-      value: 1
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
