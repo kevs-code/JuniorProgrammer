@@ -5,7 +5,7 @@ namespace ChallengeTwo
     public class PlayerControllerX : MonoBehaviour
     {
         public GameObject dogPrefab;
-        public float countdownTimer = .4f;
+        public float countdownTimer = 1f;
         private float countdown = 0f;
 
         void Update()
