@@ -4,18 +4,24 @@ namespace Lab4
 {
     public class MoveDown : MonoBehaviour
     {
-        public float speedForce = 500f;
+        public float speed = 15f;
+        // public float speedForce = 500f;
         private Rigidbody _rigidBody;
         private float lowerBound = -5;    
         private void Start()
         {
             _rigidBody = GetComponent<Rigidbody>();
+            
+            if (gameObject.CompareTag("Projectile") || gameObject.CompareTag("PowerUp"))
+            {
+                speed = 5f;
+            }
         }
 
         private void Update()
         {
-            // transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            _rigidBody.AddForce(Vector3.back * speedForce * Time.deltaTime);
+            // _rigidBody.AddForce(Vector3.forward * -speed);
+            _rigidBody.AddForce(Vector3.back * speed);
 
             if (transform.position.z < lowerBound)
             {

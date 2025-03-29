@@ -170,11 +170,17 @@ MonoBehaviour:
   - {fileID: 2460272978792354319, guid: 446df8078068f604b8174513e5a8a54c, type: 3}
   - {fileID: 2039775423342336203, guid: b5956cf0eb4d7ec419c6067cbdbce606, type: 3}
   - {fileID: 3475460827652461096, guid: f3f62aa7c8ac75646aedc9cc63588b2e, type: 3}
+  - {fileID: 0}
   powerupPrefab: {fileID: 1633294261222992531, guid: 75bcc5e9af1b1644fafd99ee14871778, type: 3}
   enemyCount: 0
   waveCount: 1
-  player: {fileID: 2072178371}
---- !u!1001 &1226924761
+  player: {fileID: 1072802721}
+--- !u!1 &1072802721 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5180960052851336382, guid: 1721c9cf998454e4a87bb49d46989fce, type: 3}
+  m_PrefabInstance: {fileID: 1244716390}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1244716390
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -224,12 +230,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1609278264171035561, guid: 1721c9cf998454e4a87bb49d46989fce, type: 3}
       propertyPath: m_Mass
-      value: 50
+      value: 20
       objectReference: {fileID: 0}
-    - target: {fileID: 1609278264171035561, guid: 1721c9cf998454e4a87bb49d46989fce, type: 3}
-      propertyPath: m_Constraints
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 4426963416972938974, guid: 1721c9cf998454e4a87bb49d46989fce, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 13400000, guid: 4408adc60cfd85d4ca146dde2aac6ba9, type: 2}
     - target: {fileID: 5180960052851336382, guid: 1721c9cf998454e4a87bb49d46989fce, type: 3}
       propertyPath: m_Name
       value: Player
@@ -357,7 +363,7 @@ MeshCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1686725908}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 4408adc60cfd85d4ca146dde2aac6ba9, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -531,11 +537,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &2072178371 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5180960052851336382, guid: 1721c9cf998454e4a87bb49d46989fce, type: 3}
-  m_PrefabInstance: {fileID: 1226924761}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -544,4 +545,4 @@ SceneRoots:
   - {fileID: 1855444524}
   - {fileID: 1686725912}
   - {fileID: 1031533811}
-  - {fileID: 1226924761}
+  - {fileID: 1244716390}
