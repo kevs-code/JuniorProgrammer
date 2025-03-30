@@ -954,6 +954,10 @@ PrefabInstance:
       value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 3033744204879009735, guid: fffa847fbe385f34c99a97f50954cd7b, type: 3}
+      propertyPath: horsePower
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3033744204879009735, guid: fffa847fbe385f34c99a97f50954cd7b, type: 3}
       propertyPath: allWheels.Array.size
       value: 0
       objectReference: {fileID: 0}
