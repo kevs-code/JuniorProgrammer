@@ -4,12 +4,12 @@ namespace PrototypeOne
 {
     public class PlayerController : MonoBehaviour
     {
-        public float speed = 20.0f;
-        public float turnSpeed = 45.0f;
+        [SerializeField] private float speed = 30.0f;
+        [SerializeField] private float turnSpeed = 50.0f;
         public float horizontalInput;
         public float forwardInput;
 
-        void Update()
+        void FixedUpdate()
         {
             horizontalInput = Input.GetAxis("Horizontal");
             forwardInput = Input.GetAxis("Vertical");

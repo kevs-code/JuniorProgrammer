@@ -5,6 +5,8 @@ namespace PrototypeTwo
     public class SpawnManager : MonoBehaviour
     {
         public GameObject[] animalPrefabs;
+        // public GameObject objectPool;
+        // public int numberOfEachAnimal = 5;
         private float spawnRangeX = 10;
         private float spawnPosZ = 20;
         private float startDelay = 2;
@@ -12,6 +14,21 @@ namespace PrototypeTwo
 
         private void Start()
         {
+            /*
+            int animalIndex = 0;
+            for (int i = 0; i < animalPrefabs.Length * numberOfEachAnimal; i++)
+            {
+                GameObject animal = Instantiate(animalPrefabs[animalIndex], objectPool.transform.position, animalPrefabs[animalIndex].transform.rotation);
+                animal.SetActive(false);
+                animal.transform.parent = objectPool.transform;
+                // then move spawnPosition to OnEnable / if transform.parent = objectPool
+                if (i % numberOfEachAnimal == 0 && i > 0)
+                {
+                    animalIndex++;       
+                }
+            }
+            */
+
             InvokeRepeating("SpawnRandomAnimal", startDelay, spawnInterval);
         }
 
