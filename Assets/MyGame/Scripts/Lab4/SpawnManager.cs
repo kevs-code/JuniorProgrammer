@@ -64,7 +64,8 @@ namespace Lab4
         // Move player back to position in front of own goal
         void ResetPlayerPosition()
         {
-            player.transform.position = new Vector3(0, 0.5f, -4);
+            player.transform.position = new Vector3(0, 0f, -4);
+            player.transform.rotation = Quaternion.identity;
             player.GetComponent<Rigidbody>().velocity = Vector3.zero;
             player.GetComponent<Rigidbody>().angularVelocity = Vector3.zero;
         }
